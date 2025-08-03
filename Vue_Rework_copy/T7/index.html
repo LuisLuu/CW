@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>LTT Quyen - GCS220316 - VUE</title>
+		<!-- link style -->
+		<link rel="stylesheet" href="./assets/styles.css" />
+		<!-- link VUE -->
+		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	</head>
+	<body>
+		<div class="nav-bar"></div>
+
+		<div id="app">
+			<div class="product-image">
+				<img v-bind:src="displayImage" :class="{ 'out-of-stock-img': !inStockComputed }" />
+			</div>
+
+			<div class="cart">Cart ({{ cart }})</div>
+
+			<div class="product-info">
+				<h1>{{ product }}</h1>
+				<h2>{{ description }}</h2>
+
+				<p v-if="inventory > 10">In Stock</p>
+				<p v-else-if="inventory <= 10 && inventory > 0">Almost sold out!</p>
+				<p v-else>Out of Stock</p>
+
+				<p v-if="onSale">On Sale!</p>
+				<p v-else>Regular Price</p>
+
+				<ul>
+					<li v-for="detail in details">{{ detail }}</li>
+				</ul>
+
+				<div class="color-circles-row">
+					<div
+						v-for="(variant, index) in variants"
+						:key="variant.id"
+						@mouseover="updateImage(variant.image, index)"
+						class="color-circle"
+						:style="{ backgroundColor: variant.color }"
+					></div>
+				</div>
+
+				<div v-for="size in sizes" :key="size.id">{{ sizes.size }}</div>
+
+				<div class="button-row">
+					<button
+						class="AddButton"
+						:class="{ disabledButton: !inStockComputed }"
+						:disabled="!inStockComputed"
+						@click="addToCart"
+					>
+						Add to Cart
+					</button>
+
+					<button class="RemoveButton" @click="RemoveFromCart">Remove</button>
+				</div>
+			</div>
+
+			<a class="link" v-bind:href="url">Explore</a>
+		</div>
+
+		<!-- import App -->
+		<script src="./main.js"></script>
+		<!-- mountApp -->
+		<script>
+			const mountedApp = app.mount("#app");
+		</script>
+	</body>
+</html>

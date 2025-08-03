@@ -1,0 +1,4 @@
+So from what I understand from the verry first lesson, the index file act as an UI/UX, the layout for my web page and the main file is the storage that store out information, data, etc. we can store different data or information and call to it from the index file.
+
+index = layout and mounting point for Vue app
+main = data storage and Vue app logic

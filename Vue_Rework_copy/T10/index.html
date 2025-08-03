@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>LTT Quyen - GCS220316 - VUE</title>
+		<!-- link style -->
+		<link rel="stylesheet" href="./assets/styles.css" />
+		<!-- link VUE -->
+		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	</head>
+	<body>
+		<div class="nav-bar"></div>
+
+		<div id="app">
+			<div class="cart">Cart ({{ cart.length }})</div>
+			<!-- <product-display></product-display> -->
+			<product-display
+				:premium="premium"
+				:details="details"
+				@add-to-cart="updateCartAdd"
+				@remove-from-cart="updateCartRemove"
+			></product-display>
+
+			<a class="link" v-bind:href="url">Explore</a>
+		</div>
+
+		<!-- import App -->
+		<script src="./main.js"></script>
+		<!-- import componenets -->
+		<script src="./components/ProductDisplay.js"></script>
+
+		<script>
+			const mountedApp = app.mount("#app");
+		</script>
+	</body>
+</html>

@@ -1,0 +1,5 @@
+from the Atribute binding in Vue.js, we can dynamically set the image source and link URL.
+
+this bind the src attribute of the image to the `image` data property, and the href attribute of the link to the `url` data property. This allows us to change the image and link dynamically based on the Vue instance's data.
+
+making our Vue app more interactive and flexible. The `v-bind` directive is used to bind the data properties to the HTML attributes, allowing us to change the content dynamically without hardcoding values in the HTML.

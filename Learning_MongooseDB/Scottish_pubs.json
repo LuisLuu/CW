@@ -1,0 +1,143 @@
+[{
+  "_id": {
+    "$oid": "5d684ad118b29c04ecbaa811"
+  },
+  "address": {
+    "Postcode": "FK1 3AL",
+    "Region": "Scotland",
+    "address": "Wester Jawcraig, Falkirk, Stirlingsh",
+    "city": "Falkirk"
+  },
+  "fsa_id": 481903,
+  "local_authority": "Falkirk",
+  "location": {
+    "easting": 283900,
+    "latitude": 55.956661,
+    "longitude": -3.861103,
+    "northing": 675302
+  },
+  "name": "Central Scotland Shooting School"
+},
+{
+  "_id": {
+    "$oid": "5d684ad218b29c04ecbae933"
+  },
+  "address": {
+    "Postcode": "EH1 3EP",
+    "Region": "Scotland",
+    "address": "28 York Place",
+    "city": "Edinburgh"
+  },
+  "fsa_id": 461890,
+  "local_authority": "City of Edinburgh",
+  "location": {
+    "easting": 325678,
+    "latitude": 55.956246,
+    "longitude": -3.191888,
+    "northing": 674334
+  },
+  "name": "Police Scotland Club"
+},
+{
+  "_id": {
+    "$oid": "5d684ad218b29c04ecbaf45f"
+  },
+  "address": {
+    "Postcode": "DD10 8QD",
+    "Region": "Scotland",
+    "address": "16 Wellington Street, Montrose",
+    "city": "Montrose"
+  },
+  "fsa_id": 450999,
+  "local_authority": "Angus",
+  "location": {
+    "easting": 371898,
+    "latitude": 56.714025,
+    "longitude": -2.460691,
+    "northing": 758133
+  },
+  "name": "Royal British Legion Scotland"
+},
+{
+  "_id": {
+    "$oid": "5d684ad218b29c04ecbaf460"
+  },
+  "address": {
+    "Postcode": "DD11 3AP",
+    "Region": "Scotland",
+    "address": "8 Helen Street, Arbroath",
+    "city": "Arbroath"
+  },
+  "fsa_id": 451000,
+  "local_authority": "Angus",
+  "location": {
+    "easting": 363805,
+    "latitude": 56.560516,
+    "longitude": -2.590495,
+    "northing": 741106
+  },
+  "name": "Royal British Legion Scotland - Arbroath Branch"
+},
+{
+  "_id": {
+    "$oid": "5d684ad318b29c04ecbb3ac2"
+  },
+  "address": {
+    "Postcode": "WF17 9HZ",
+    "Region": "Yorkshire & The Humber",
+    "address": "1115 Bradford Road, Birstall, Batley, West Yorkshire",
+    "city": "Batley"
+  },
+  "contact": {
+    "phone": "01924 477926"
+  },
+  "fsa_id": 408406,
+  "local_authority": "Kirklees",
+  "location": {
+    "easting": 421376,
+    "latitude": 53.735544,
+    "longitude": -1.677434,
+    "northing": 426620
+  },
+  "name": "The Scotland"
+},
+{
+  "_id": {
+    "$oid": "5d684ad318b29c04ecbb53dd"
+  },
+  "address": {
+    "Postcode": "G73 1SX",
+    "Region": "Scotland",
+    "address": "19 Rutherglen Road, Rutherglen, Glasgow",
+    "city": "Glasgow"
+  },
+  "fsa_id": 492172,
+  "local_authority": "South Lanarkshire",
+  "location": {
+    "easting": 260473,
+    "latitude": 55.835983,
+    "longitude": -4.229453,
+    "northing": 662555
+  },
+  "name": "West Of Scotland Bowling Club"
+},
+{
+  "_id": {
+    "$oid": "5d684ad318b29c04ecbb53de"
+  },
+  "address": {
+    "Postcode": "G62 6HX",
+    "Region": "Scotland",
+    "address": "Rugby Club, 71 Glasgow Road",
+    "city": "Glasgow"
+  },
+  "fsa_id": 457641,
+  "local_authority": "East Dunbartonshire",
+  "location": {
+    "easting": 255747,
+    "latitude": 55.938418,
+    "longitude": -4.311012,
+    "northing": 674120
+  },
+  "name": "West Of Scotland Rugby Football Club"
+}]

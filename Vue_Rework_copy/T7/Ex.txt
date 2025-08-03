@@ -1,0 +1,1 @@
+from the conditional rendering section of the Vue.js application. This allows us to display different messages based on the inventory level of the product. If the inventory is greater than 10, it shows "In Stock". If it's between 1 and 10, it displays "Almost sold out!", and if there are no items left, it shows "Out of Stock" for this specific case.

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>LTT Quyen - GCS220316 - VUE</title>
+		<!-- link style -->
+		<link rel="stylesheet" href="./assets/styles.css" />
+		<!-- link VUE -->
+		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<div class="product-image">
+				<img v-bind:src="image" />
+			</div>
+
+			<div class="product-info">
+				<h1>{{ product }}</h1>
+				<h2>{{ description }}</h2>
+
+				<p v-if="inventory > 10">In Stock</p>
+				<p v-else-if="inventory <= 10 && inventory > 0">Almost sold out!</p>
+				<p v-else>Out of Stock</p>
+
+				<p v-if="onSale">On Sale!</p>
+				<p v-else>Regular Price</p>
+				<!-- This is T4 challenge -->
+			</div>
+
+			<a class="link" v-bind:href="url">This link would lead you to another site!!!</a>
+		</div>
+
+		<!-- import App -->
+		<script src="./main.js"></script>
+		<!-- mountApp -->
+		<script>
+			const mountedApp = app.mount("#app");
+		</script>
+	</body>
+</html>

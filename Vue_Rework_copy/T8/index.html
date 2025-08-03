@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>LTT Quyen - GCS220316 - VUE</title>
+		<!-- link style -->
+		<link rel="stylesheet" href="./assets/styles.css" />
+		<!-- link VUE -->
+		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	</head>
+	<body>
+		<div class="nav-bar"></div>
+
+		<div id="app">
+			<div class="product-image">
+				<img v-bind:src="displayImage" :class="{ 'out-of-stock-img': !inStockComputed }" />
+			</div>
+
+			<div class="cart">Cart ({{ cart }})</div>
+
+			<div class="product-info">
+				<ul>
+					<h1 v-if="onSale">{{title2}}</h1>
+					<h1 v-else>{{title1}}</h1>
+					<h2>{{ description }}</h2>
+					<!-- This is T8 challenge -->
+
+					<ul>
+						<li v-for="detail in details">{{ detail }}</li>
+					</ul>
+
+					<!-- Display sizes below the details list -->
+					<div class="sizes-row">
+						<span
+							v-for="size in sizes"
+							:key="size.id"
+							class="size-item"
+							:class="{ selected: selectedSize === size.id }"
+							@click="selectedSize = size.id"
+						>
+							{{ size.size }}
+						</span>
+					</div>
+				</ul>
+
+				<p v-if="inventory > 10">In Stock</p>
+				<p v-else-if="inventory <= 10 && inventory > 0">Almost sold out!</p>
+				<p v-else>Out of Stock</p>
+
+				<div class="color-circles-row">
+					<div
+						v-for="(variant, index) in variants"
+						:key="variant.id"
+						@mouseover="updateImage(variant.image, index)"
+						class="color-circle"
+						:style="{ backgroundColor: variant.color }"
+					></div>
+				</div>
+
+				<div class="button-row">
+					<button
+						class="AddButton"
+						:class="{ disabledButton: !inStockComputed }"
+						:disabled="!inStockComputed"
+						@click="addToCart"
+					>
+						Add to Cart
+					</button>
+
+					<button class="RemoveButton" @click="RemoveFromCart">Remove</button>
+				</div>
+			</div>
+
+			<a class="link" v-bind:href="url">Explore</a>
+		</div>
+
+		<!-- import App -->
+		<script src="./main.js"></script>
+		<!-- mountApp -->
+		<script>
+			const mountedApp = app.mount("#app");
+		</script>
+	</body>
+</html>
